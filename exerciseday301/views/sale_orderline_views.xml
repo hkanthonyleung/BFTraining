@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="custom_product_form">
+      <field name="name">custom_product_form</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/><!--if we inherit must add this sentence-->      
+      <field name="arch" type="xml">
+        <xpath expr="//notebook//page[@name='order_lines']//field[@name='order_line']//tree//field[@name='name']" position="after">
+          <field name="min_age"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
