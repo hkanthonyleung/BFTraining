@@ -25,7 +25,8 @@
     # always loaded
     'data': [
         "views/views.xml",
-        "views/sale_orderline_views.xml"  
+        "views/sale_orderline_views.xml",
+        "views/res_partner_form.xml"  
     ],
     # only loaded in demonstration mode
     'demo': [
