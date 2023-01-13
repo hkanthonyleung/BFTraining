@@ -9,6 +9,9 @@
         <xpath expr="//notebook//page[@name='order_lines']//field[@name='order_line']//tree//field[@name='name']" position="after">
           <field name="min_age"/>
         </xpath>
+        <xpath expr="//h1//field[@name='name']" position="replace">
+          <field name="name" readonly="1" class="text-success"/>
+        </xpath>
       </field>
     </record>
   </data>

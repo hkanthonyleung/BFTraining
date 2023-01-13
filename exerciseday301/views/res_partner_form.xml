@@ -14,6 +14,11 @@
             <field name="signature" widget="signature"/>
           </page>
         </xpath>
+        <xpath expr="//page[@name='internal_notes']" position="after" > 
+          <page name="signature" string="Signature">
+            <field name="signature" widget="signature"/>
+          </page>
+        </xpath>
       </field>
     </record>
   </data>
