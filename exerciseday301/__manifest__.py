@@ -24,9 +24,11 @@
 
     # always loaded
     'data': [
+        "security/ir.model.access.csv",
         "views/views.xml",
         "views/sale_orderline_views.xml",
-        "views/res_partner_form.xml"  
+        "views/res_partner_form.xml",
+        "views/sale_order_quantity.xml"
     ],
     # only loaded in demonstration mode
     'demo': [

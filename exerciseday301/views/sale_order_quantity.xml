@@ -1,0 +1,19 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="set_order_quantity_wizard">
+      <field name="name">set_order_quantity_wizard</field>
+      <field name="model">sale.order.quantity</field>      
+      <field name="arch" type="xml">
+        <form string="Set Quantity">
+            <field name="quantity" />
+            <field name="sale_order" />            
+            <footer>
+                <button name="action_set_quantity" string="Confirm" type="object" data-hotkey="c" class="btn-primary" />
+                <button string="Cancel" class="btn btn-default" special="cancel" data-hotkey="z"/><!--No need set name-->
+            </footer>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>

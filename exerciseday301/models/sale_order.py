@@ -1,7 +1,6 @@
 
 
-from odoo import models, fields, api
-
+from odoo import models, fields, api, _
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
@@ -21,3 +20,15 @@ class SaleOrder(models.Model):
 
     phone = fields.Char(string="Phone", related="partner_id.phone")
     mobile = fields.Char(string="Mobile", related="partner_id.mobile")
+
+    #Wizard
+    def action_set_quantity(self):
+        return {
+            'name': _('Set Sales Order Quantity'),
+            'view_mode': 'form',
+            'res_model': 'sale.order.quantity',
+            'view_id': self.env.ref('exerciseday301.set_order_quantity_wizard').id,
+            'type': 'ir.actions.act_window',
+            'context': {'default_sale_order': self.id},
+            'target': 'new'
+        }

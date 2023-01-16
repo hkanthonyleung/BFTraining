@@ -12,6 +12,13 @@
         <xpath expr="//h1//field[@name='name']" position="replace">
           <field name="name" readonly="1" class="text-success"/>
         </xpath>
+
+        <!--button-->
+        <xpath expr="//header//button[@name='action_draft']" position="after">
+          <button name="action_set_quantity" type="object" string="Set Quantity" data-hotkey="q" /><!--declare name suggest to add action as prefix-->
+        </xpath>
+
+
       </field>
     </record>
   </data>
