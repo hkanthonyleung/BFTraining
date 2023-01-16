@@ -28,7 +28,8 @@
         "views/views.xml",
         "views/sale_orderline_views.xml",
         "views/res_partner_form.xml",
-        "views/sale_order_quantity.xml"
+        "views/sale_order_quantity.xml",
+        "reports/sale_order_report.xml"
     ],
     # only loaded in demonstration mode
     'demo': [

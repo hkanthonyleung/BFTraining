@@ -12,4 +12,4 @@ class ResPartner(models.Model):
                 rec.email = rec.name.replace(' ', '_').lower() + '@odoo.com'        
     
     signature = fields.Binary(string="Signature")
-    
+    age = fields.Integer(string="Age")
