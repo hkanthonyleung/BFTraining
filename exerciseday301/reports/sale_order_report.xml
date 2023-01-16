@@ -5,6 +5,21 @@
             <xpath expr="//th[@name='th_description']" position="before" > 
                 <th name="th_numbering" class="text-start">No</th>
             </xpath>
+            <xpath expr="//td[@name='td_name']" position="before" > 
+                <td name="td_numbering"><p t-esc="line_index + 1" /></td>
+            </xpath>
+            <xpath expr="//t[@t-foreach='lines_to_report']" position="before">
+                <t t-set="total_qty" t-value="0"/>
+            </xpath>
+            <xpath expr="//t[@t-foreach='lines_to_report']//t[@t-set='current_subtotal']" position="before">
+                <t t-set="total_qty" t-value="total_qty + line.product_uom_qty"/>
+            </xpath>
+            <xpath expr="///table" position="after" >
+                <div>
+                    Total Qty: <span t-out="total_qty"/>
+                </div>
+            </xpath>
+
         </template>
     </data>
 </odoo>
