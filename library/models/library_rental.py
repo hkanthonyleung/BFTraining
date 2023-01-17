@@ -4,6 +4,7 @@ class LibraryRental(models.Model):
     _name = "library.rental"
 
     renter = fields.Char("Renter")
+    renter2 = fields.Many2one("res.partner", string="New Renter")
     book = fields.Many2one("library.book")
     date_rent = fields.Date("Rental Date")
     date_end = fields.Date("Max Return Date")

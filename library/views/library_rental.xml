@@ -6,7 +6,7 @@
         <field name="model">library.rental</field>
         <field name="arch" type="xml">
             <tree string="Rentals">
-                <field name="renter" />
+                <field name="renter2" />
                 <field name="book" />
             </tree>
         </field>
@@ -20,7 +20,7 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="renter" />
+                            <field name="renter2" />
                             <field name="book"/>
                         </group>
                         <group>
