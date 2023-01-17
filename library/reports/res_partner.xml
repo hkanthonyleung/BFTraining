@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_rental_document" name="rental_template">
+        <t t-call="web.external_layout">
+            <div class="page">
+               <!--report content-->
+                <h1><span>Rental Report</span></h1>
+                <span t-field="doc.name"/>
+                
+            </div>
+        </t>
+    </template>
+    <template id="report_rental">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="library.report_rental_document" t-lang="doc.lang"/> <!--self define the report name-->
+            </t>
+        </t>
+    </template>
+</odoo>
