@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="group_library_admin" model="res.groups"> <!--Create res.groups data = Create Group-->
-        <field name="name">User: administrator</field>        
-        <field name="implied_ids" eval="[(4,  ref('group_library_worker'))]" />
-    </record>
     <record id="group_library_worker" model="res.groups">
         <field name="name">User: worker</field>
         <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
     </record>
+    <record id="group_library_admin" model="res.groups"> <!--Create res.groups data = Create Group-->
+        <field name="name">User: administrator</field>        
+        <field name="implied_ids" eval="[(4,  ref('group_library_worker'))]" />
+    </record>    
 </odoo>
