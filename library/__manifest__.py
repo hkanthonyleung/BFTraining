@@ -17,9 +17,8 @@
         "views/menus.xml",
         "reports/action.xml",
         "reports/res_partner.xml",
-        "security/ir_rule.xml",
-        "security/library.xml"
-
+        "security/library.xml",
+        "security/ir_rule.xml"
     ],
     'license': 'LGPL-3',
 }

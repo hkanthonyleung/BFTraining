@@ -30,8 +30,8 @@
         "views/res_partner_form.xml",
         "views/sale_order_quantity.xml",
         "reports/sale_order_report.xml",
-        "security/ir_rule.xml",
-        "security/res_group.xml"
+        "security/res_group.xml",
+        "security/ir_rule.xml"        
     ],
     # only loaded in demonstration mode
     'demo': [
