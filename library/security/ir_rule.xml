@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_library_admin" model="ir.rule">
+        <field name="name">Library Administrator Rule</field>
+        <field name="model_id" ref="library.model_library_rental" /><!--External ID, model = technical name, model id = external id-->
+        <field name="domain_force" >[(1,'=',1)]</field><!--Always True for administrator-->
+        <field name="groups" eval="[(4, ref('library.group_library_admin'))]"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+    </record>
+    <record id="rule_library_worker" model="ir.rule">
+        <field name="name">Library User edit own Rule</field>
+        <field name="model_id" ref="library.model_library_rental" /><!--External ID, model = technical name, model id = external id-->
+        <field name="domain_force" >[('create_uid','=',user.id)]</field><!--default column create_uid, everytime update will create this column, use this field to confirm this record owned by whom-->
+        <field name="groups" eval="[(4, ref('library.group_library_worker'))]"/>
+        <field name="perm_unlink" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+    </record>
+    <record id="rule_library_viewer" model="ir.rule">
+        <field name="name">Library user view all</field>
+        <field name="model_id" ref="library.model_library_rental" /><!--External ID, model = technical name, model id = external id-->
+        <field name="domain_force" >[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('library.group_library_worker'))]"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+    </record>
+</odoo>

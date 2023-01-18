@@ -29,7 +29,9 @@
         "views/sale_orderline_views.xml",
         "views/res_partner_form.xml",
         "views/sale_order_quantity.xml",
-        "reports/sale_order_report.xml"
+        "reports/sale_order_report.xml",
+        "security/ir_rule.xml",
+        "security/res_group.xml"
     ],
     # only loaded in demonstration mode
     'demo': [
