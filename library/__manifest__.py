@@ -11,14 +11,14 @@
     """,
     'depends': ['base'],
     'data': [
+        "security/library.xml",
         "security/ir.model.access.csv",
         "views/library_book.xml",
         "views/library_rental.xml",
         "views/menus.xml",
         "reports/action.xml",
-        "reports/res_partner.xml",
-        "security/library.xml",
-        "security/ir_rule.xml"
+        "report/res_partner.xml",
+        "security/ir_rule.xml",
     ],
     'license': 'LGPL-3',
 }
